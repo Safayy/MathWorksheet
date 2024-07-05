@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import usePost from '../hooks/usePost'
 import Header from '../components/Header'
 import Question from '../components/Question'
 import questions from '../assets/worksheet.json'
@@ -32,6 +33,10 @@ function Quiz () {
           if (questions[i].answer_index == selections[i])
             score ++
         }
+        usePost({
+            'name':name,
+            'score':score
+          }, 'leaderboard')
         return score
       })
     }
@@ -70,11 +75,11 @@ function Quiz () {
         )}
         </form>
   
-        <button className='roboto-bold button-medium' onClick={calculateScore}>Calculate Score</button>
+        <button className='roboto-bold button' onClick={calculateScore}>Submit</button>
         <button
-        className={`roboto-bold button-medium ${Object.keys(selections).length === 0 && 'button-disabled'}`}
+        className={`roboto-bold button ${Object.keys(selections).length === 0 && 'button-disabled'}`}
         onClick={onClearOptions}
-        >Reset Selections</button>
+        >Reset</button>
     </>
     )
 }

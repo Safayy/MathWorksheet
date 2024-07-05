@@ -2,9 +2,14 @@
 :root {
   font-family: "Roboto", sans-serif;
   --gray: rgb(226, 235, 237);
-  --light-blue: rgb(201, 223, 231);
+  --blue: rgb(59, 155, 190);
 }
-h1{
+.display-block {
+  display: block;
+}
+
+/* Font */
+h1 {
   font-weight: 500;
 }
 .roboto-thin {
@@ -17,21 +22,88 @@ h1{
   font-weight: 300;
   font-style: normal;
 }
-
 .roboto-regular {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
-
 .roboto-medium {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-style: normal;
 }
-
 .roboto-bold {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-style: normal;
+}
+
+.red {
+  color: red;
+}
+.center {
+  text-align: center;
+}
+.font-small {
+  font-size: 0.8em;
+}
+
+/* Flex */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-fill {
+  flex: 1;
+}
+.flex-2-col-grid-item {
+  flex-basis: 100%;
+}
+.flex-grid {
+  justify-content: space-around;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 600px) {
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .flex-2-col-grid-item {
+    flex-basis: 40%;
+  }
+}
+
+/* Button */
+.button {
+  background: none;
+  background-color: rgb(93, 199, 101);
+  cursor: crosshair;
+  outline: inherit;
+  border-radius: 60px;
+  border: none;
+  padding: 10px;
+  margin: 10px;
+}
+
+.button-large {
+  font-size: 2em;
+  padding: 20px;
+}
+
+.button:hover {
+  -webkit-filter: brightness(50%);
+  transition: all 0.6s ease;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+}
+.button-disabled {
+  background-color: rgb(188, 197, 206);
+}
+.item-center {
+  margin: 0 auto;
 }

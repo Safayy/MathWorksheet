@@ -2,7 +2,7 @@ const Header = ({name, setName, score}) => {
 
     return (
         <header>
-            <h1 className='center round-div'>Rounding Off to Nearest 10</h1>
+            <h1 className='center'>Rounding Off to Nearest 10</h1>
             <form className='margin-between-10'>
                 <label className='flex flex-row margin-left'> Name :
                     <input className='flex-fill'

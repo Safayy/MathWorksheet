@@ -35,7 +35,7 @@
         "answer_index":1
     },
     {
-        "question":"199 rounded off to the nearest is 10 ..",
+        "question":"199 rounded off to the nearest 10 is..",
         "options":[190, 100, 200],
         "answer_index":2
     },
@@ -55,7 +55,7 @@
         "answer_index":0
     },
     {
-        "question":"999 rounded off to the nearest is 10 is..",
+        "question":"999 rounded off to the nearest 10 is..",
         "options":[990, "1,000", 909],
         "answer_index":1
     }

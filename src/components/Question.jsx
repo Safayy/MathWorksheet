@@ -1,31 +1,32 @@
 import { useState } from 'react'
 
-// const Question = (props) => {
-function Question({text, options, index, onSelectOption}) {
-    const [selectedOptionIndex, setSelectedOptionIndex] = useState(null)
+function Question({text, options, index, selectedOptionIndex, setSelectedOptionIndex}) {
 
-    function clearSelection() {
-        setSelectedOptionIndex(null)
+    function handleClick(event) {
+        setSelectedOptionIndex(event.target.value);
     }
 
     return (
-        <span>
-            <p>{text}</p>
+        <div className='card flex-2-col-grid-item'>
+            <p className='roboto-bold'>{text}</p>
             {options.map( (option, optionIndex) =>
-                <label key={`${index}${optionIndex}`} htmlFor={text}>
+                <label
+                className='display-block'
+                key={`${index}${optionIndex}`}
+                htmlFor={text}>
                     <input
                         type="radio"
                         name={text}
                         value={optionIndex}
                         checked={selectedOptionIndex == optionIndex}
-                        onClick={() => setSelectedOptionIndex(event.target.value)}
-                        onChange={(event) => {onSelectOption(index, event.target.value)}}
+                        onClick={handleClick}
+                        onChange={() => {}}
                     />
 
                     {String.fromCharCode(97+optionIndex)}. {option}
                 </label>
             )}
-        </span>
+        </div>
     )
 }
 export default Question

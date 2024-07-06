@@ -1,7 +1,7 @@
 # Quiz
 A rounding quiz with a global high score leaderboard
-<div align=center width=200 height=200 background-colod:red>
-  
+<div align=center>
+
 [![Button]][Link] 
 </div>
 

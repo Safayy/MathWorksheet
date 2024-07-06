@@ -20,14 +20,14 @@
 .table > tbody > tr:nth-child(even) {
   background-color: #ddd;
 }
-.table > tbody > tr:nth-child(1) {
+.table > tbody > tr:first-child {
   background-color: rgb(224, 214, 148);
 }
 .table > tbody > tr >  td {
   text-align: center;
 }
-.table tr:hover {
-  background-color: pink;
+.table tbody tr:hover {
+  background-color: rgb(137, 133, 135)!important;
 }
 
 
@@ -36,4 +36,3 @@
   padding: 20px;
   margin-bottom: 10px;
 }
-
